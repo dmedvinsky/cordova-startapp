@@ -38,8 +38,8 @@ public class StartApp extends Plugin
                 if (args.length() != 1) {
                     return new PluginResult(PluginResult.Status.INVALID_ACTION);
                 }
-                JSONObject obj = args.getJSONObject(0);
-                startActivity(obj.getString("app"));
+                String component = args.getString(0);
+                startActivity(component);
                 return new PluginResult(PluginResult.Status.OK);
             }
             return new PluginResult(PluginResult.Status.INVALID_ACTION);
