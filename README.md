@@ -4,7 +4,7 @@
 
 MIT/X11
 
-## Adding the Plugin to your project ##
+## Usage
 
 1. Create `src/com/phonegap/plugins/startapp` directory.
 2. Copy `StartApp.java` to `src/com/phonegap/plugins/startapp` directory.
