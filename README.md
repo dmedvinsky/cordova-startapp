@@ -6,6 +6,26 @@ MIT/X11
 
 ## Usage
 
+### iOS
+
+1. Add `StartApp.m` and `StartApp.h` files to your project in `Plugins`
+   directory.
+3. Add `startapp.ios.js` to your web application.
+4. Add
+
+        <key>StartApp</key>
+        <string>StartApp</string>
+
+   to your `Cordova.plist` inside `<key>Plugins</key><dict>...</dict>`
+5. Use
+
+        window.plugins.startapp.start(
+            {ios: 'https://maps.google.com/'},
+            successCallback, failureCallback
+        );
+
+   whenever required.
+
 ### Android
 
 1. Create `src/com/phonegap/plugins/startapp` directory.
