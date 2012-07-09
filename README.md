@@ -6,40 +6,36 @@ MIT/X11
 
 ## Usage
 
-### iOS
+See Android and iOS folders for Android and iOS usage, respectivelly.
 
-1. Add `StartApp.m` and `StartApp.h` files to your project in `Plugins`
-   directory.
-3. Add `startapp.ios.js` to your web application.
-4. Add
+### If you want to build for both platforms
+
+1. Add `iOS/StartApp.m` and `iOS/StartApp.h` files to your iOS project in
+   `Plugins` directory.
+2. Add `iOS/startapp.js` to your web application as `startapp.ios.js`.
+3. Add
 
         <key>StartApp</key>
         <string>StartApp</string>
 
    to your `Cordova.plist` inside `<key>Plugins</key><dict>...</dict>`
-5. Use
-
-        window.plugins.startapp.start(
-            {ios: 'https://maps.google.com/'},
-            successCallback, failureCallback
-        );
-
-   whenever required.
-
-### Android
-
-1. Create `src/com/phonegap/plugins/startapp` directory.
-2. Copy `StartApp.java` to `src/com/phonegap/plugins/startapp` directory.
-3. Add `startapp.android.js` to your web application.
-4. Add
+4. Copy `Android/StartApp.java` to `src/com/phonegap/plugins/startapp`
+   directory of your Android project.
+5. Add `Android/startapp.js` to your web application as `startapp.android.js`.
+6. Add
 
         <plugin name="StartApp" value="com.phonegap.plugins.startapp.StartApp"/>
 
    to your `res/xml/plugins/xml` inside `<plugins></plugins>`.
-5. Use
+7. Copy corresponding JS file to `startapp.js` when building the project.
+8. Include `startapp.js` on your HTML pages.
+8. Use
 
         window.plugins.startapp.start(
-            {android: 'com.mycompany.myapp/com.mycompany.myapp.MyActivity'},
+            {
+                android: 'com.mycompany.myapp/com.mycompany.myapp.MyActivity',
+                ios: 'myURL'
+            },
             successCallback, failureCallback
         );
 
