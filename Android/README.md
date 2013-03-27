@@ -15,10 +15,10 @@ MIT/X11
 
         <plugin name="StartApp" value="com.phonegap.plugins.startapp.StartApp"/>
 
-   to your `res/xml/plugins/xml` inside `<plugins></plugins>`.
+   to your `res/xml/config.xml` inside `<plugins></plugins>`.
 5. Use
 
-        window.plugins.startapp.start(
+        window.startapp.start(
             {android: 'com.mycompany.myapp/com.mycompany.myapp.MyActivity'},
             successCallback, failureCallback
         );
