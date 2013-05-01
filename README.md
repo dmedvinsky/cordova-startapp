@@ -26,12 +26,12 @@ See Android and iOS folders for Android and iOS usage, respectivelly.
 
         <plugin name="StartApp" value="com.phonegap.plugins.startapp.StartApp"/>
 
-   to your `res/xml/plugins/xml` inside `<plugins></plugins>`.
+   to your `res/xml/config.xml` inside `<plugins></plugins>`.
 7. Copy corresponding JS file to `startapp.js` when building the project.
 8. Include `startapp.js` on your HTML pages.
 8. Use
 
-        window.plugins.startapp.start(
+        window.startapp.start(
             {
                 android: 'com.mycompany.myapp/com.mycompany.myapp.MyActivity',
                 ios: 'myURL'

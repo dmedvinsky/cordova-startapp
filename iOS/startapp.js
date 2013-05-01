@@ -12,6 +12,4 @@ StartApp.prototype.start = function(params, success, fail) {
     return cordova.exec(success, fail, 'StartApp', 'start', [url]);
 };
 
-cordova.addConstructor(function() {
-    cordova.addPlugin('startapp', new StartApp());
-});
+window.startapp = new StartApp();

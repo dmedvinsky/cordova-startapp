@@ -19,7 +19,7 @@ MIT/X11
    to your `Cordova.plist` inside `<key>Plugins</key><dict>...</dict>`
 4. Use
 
-        window.plugins.startapp.start(
+        window.startapp.start(
             {ios: 'myURL'},
             successCallback, failureCallback
         );
